@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerCommand>$(PYTHON27)\python.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>
+    </LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>$(SolutionDir)..\..\kangaroo</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LocalDebuggerCommand>$(PYTHON27)\python.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>mutmap.py -w=20 data/single_scan/TERT.seq E:/Results/deepbind/encode/best GABPA_GM12878_GABP_HudsonAlpha</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>E:/Sync/bind</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerEnvironment>PYTHONPATH=../smat_py;../deepity;../hpsearch</LocalDebuggerEnvironment>
+  </PropertyGroup>
+</Project>

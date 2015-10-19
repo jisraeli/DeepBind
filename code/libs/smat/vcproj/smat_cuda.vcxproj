@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\src\smat_cuda\arange.cu" />
+    <CudaCompile Include="..\src\smat_cuda\diff.cu" />
+    <CudaCompile Include="..\src\smat_cuda\dot.cu" />
+    <CudaCompile Include="..\src\smat_cuda\copy.cu" />
+    <CudaCompile Include="..\src\smat_cuda\dropout.cu" />
+    <CudaCompile Include="..\src\smat_cuda\elemwise3.cu" />
+    <CudaCompile Include="..\src\smat_cuda\mask.cu" />
+    <CudaCompile Include="..\src\smat_cuda\rand.cu">
+      <Warning Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Warning>
+    </CudaCompile>
+    <CudaCompile Include="..\src\smat_cuda\elemwise2.cu" />
+    <CudaCompile Include="..\src\smat_cuda\repeat.cu" />
+    <CudaCompile Include="..\src\smat_cuda\tile.cu" />
+    <CudaCompile Include="..\src\smat_cuda\transpose.cu" />
+    <CudaCompile Include="..\src\smat_cuda\reduce.cu" />
+    <CudaCompile Include="..\src\smat_cuda\reduce_x.cu" />
+    <CudaCompile Include="..\src\smat_cuda\reduce_y.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\smat_cuda\config.h" />
+    <ClInclude Include="..\src\smat_cuda\cuda_errors.h" />
+    <ClInclude Include="..\src\smat_cuda\cuda_context.h" />
+    <ClInclude Include="..\src\smat_cuda\launch_util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\smat_cuda\cuda_errors.cpp" />
+    <ClCompile Include="..\src\smat_cuda\cuda_context.cpp" />
+    <ClCompile Include="..\src\smat_cuda\launch_util.cpp" />
+    <ClCompile Include="..\src\smat_cuda\register_ext.cpp" />
+    <ClCompile Include="..\src\smat_cuda\sanitycheck.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\smat_cuda\elemwise2.cuh">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="..\src\smat_cuda\elemwise3.cuh">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="..\src\smat_cuda\reduce.cuh">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="..\src\smat_cuda\reducers.cuh">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="..\src\smat_cuda\reduce_x.cuh">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="..\src\smat_cuda\reduce_y.autotune.cuh">
+      <FileType>Document</FileType>
+    </ClInclude>
+    <ClInclude Include="..\src\smat_cuda\reduce_y.cuh">
+      <FileType>Document</FileType>
+    </ClInclude>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FBE79785-4007-4134-9467-B6CF4F92EC2C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>smat_cuda</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.0.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)..\build\$(Configuration)\bin\</OutDir>
+    <IntDir>$(SolutionDir)..\build\$(Configuration)\obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\build\$(Configuration)\bin\</OutDir>
+    <IntDir>$(SolutionDir)..\build\$(Configuration)\obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;SMAT_CUDA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)../src;$(CudaToolkitIncludeDir)</AdditionalIncludeDirectories>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <DisableLanguageExtensions>false</DisableLanguageExtensions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>
+      </MinimalRebuild>
+      <DisableSpecificWarnings>4251;4503</DisableSpecificWarnings>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OutDir);$(CudaToolkitLibDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>base.lib;smat.lib;cudart.lib;cublas.lib;curand.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <CodeGeneration>compute_30,sm_30</CodeGeneration>
+      <Warning>InheritFromHost</Warning>
+      <AdditionalCompilerOptions>/wd4251,/wd4503</AdditionalCompilerOptions>
+      <Defines>SMAT_CUDA_EXPORTS</Defines>
+      <FastMath>true</FastMath>
+      <KeepDir>$(IntDir)nvcc</KeepDir>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;SMAT_CUDA_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)../src;$(CudaToolkitIncludeDir)</AdditionalIncludeDirectories>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <AdditionalOptions>
+      </AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4251;4503</DisableSpecificWarnings>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <OmitFramePointers>
+      </OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <ExceptionHandling>Async</ExceptionHandling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <AdditionalLibraryDirectories>$(OutDir);$(CudaToolkitLibDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>base.lib;smat.lib;cudart.lib;cublas.lib;curand.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <CudaCompile>
+      <CodeGeneration>compute_30,sm_30</CodeGeneration>
+      <Warning>InheritFromHost</Warning>
+      <AdditionalCompilerOptions>/wd4251,/wd4503</AdditionalCompilerOptions>
+      <Defines>SMAT_CUDA_EXPORTS</Defines>
+      <KeepDir>$(IntDir)nvcc</KeepDir>
+      <FastMath>true</FastMath>
+      <GenerateRelocatableDeviceCode>true</GenerateRelocatableDeviceCode>
+      <MaxRegCount>
+      </MaxRegCount>
+    </CudaCompile>
+    <CudaLink />
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 7.0.targets" />
+  </ImportGroup>
+</Project>

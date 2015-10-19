@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;h;hxx;cu;cuh</Extensions>
+    </Filter>
+    <Filter Include="Source Files\vm">
+      <UniqueIdentifier>{03f4cefa-7ac2-451e-88b8-cd6f03f4348c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\vm\util">
+      <UniqueIdentifier>{e243aaed-3a8e-46fe-aa68-046c0a048259}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\smat\config.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\smat\dtypes.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\smat\shape.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\smat\smat.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\smat\smat_ops.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\smat\vm\instruction_db.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\smat\vm\machine.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\smat\vm\instruction.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\smat\vm\argument.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\smat\vm\heap.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\smat\vm\context.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\smat\vm\extension.h">
+      <Filter>Source Files\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\smat\vm\util\specialization_table.h">
+      <Filter>Source Files\vm\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\smat\vm\util\specialization_typelists.h">
+      <Filter>Source Files\vm\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\smat\vm\util\autotune.h">
+      <Filter>Source Files\vm\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\smat\dtypes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\smat\shape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\smat\smat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\smat\vm\instruction_db.cpp">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\smat\vm\instruction.cpp">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\smat\vm\machine.cpp">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\smat\vm\argument.cpp">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\smat\vm\heap.cpp">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\smat\vm\context.cpp">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\smat\vm\extension.cpp">
+      <Filter>Source Files\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\smat\vm\util\autotune.cpp">
+      <Filter>Source Files\vm\util</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;h;hxx;hpp</Extensions>
+    </Filter>
+    <Filter Include="CUDA Kernels">
+      <UniqueIdentifier>{45301eb6-c0c0-4517-ba98-587fe8cde372}</UniqueIdentifier>
+      <Extensions>.cu;.cuh</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\deepity_smat\gradstep.cu">
+      <Filter>CUDA Kernels</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\deepity_smat\madd_bcast.cu">
+      <Filter>CUDA Kernels</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\deepity_smat\dropout.cu">
+      <Filter>CUDA Kernels</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\deepity_smat\maskout.cu">
+      <Filter>CUDA Kernels</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\deepity_smat\blockwise_dot.cu">
+      <Filter>CUDA Kernels</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\deepity_smat\deepity_smat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

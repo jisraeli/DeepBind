@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{581d3961-3143-4413-899b-f9723a3f8175}</ProjectGuid>
+    <ProjectHome>..</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>kangaroo</Name>
+    <RootNamespace>kangaroo</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>
+    </CommandLineArguments>
+    <InterpreterPath />
+    <InterpreterArguments />
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="deepity\" />
+    <Folder Include="deepity\std\" />
+    <Folder Include="deepity\_ext\" />
+    <Folder Include="deepity\_io_\" />
+    <Folder Include="deepity\_lockfile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="deepity\data.py" />
+    <Compile Include="deepity\dumpviz.py" />
+    <Compile Include="deepity\globals.py" />
+    <Compile Include="deepity\gradcheck.py" />
+    <Compile Include="deepity\hpsearch.py" />
+    <Compile Include="deepity\hypertrain.py" />
+    <Compile Include="deepity\node.py" />
+    <Compile Include="deepity\plug.py" />
+    <Compile Include="deepity\report.py" />
+    <Compile Include="deepity\report_plotter.py" />
+    <Compile Include="deepity\sgd.py" />
+    <Compile Include="deepity\std\chain.py" />
+    <Compile Include="deepity\std\elemwise.py" />
+    <Compile Include="deepity\std\full.py" />
+    <Compile Include="deepity\std\loss.py" />
+    <Compile Include="deepity\std\softmax.py" />
+    <Compile Include="deepity\std\trainable.py" />
+    <Compile Include="deepity\std\__init__.py" />
+    <Compile Include="deepity\tape2logo.py" />
+    <Compile Include="deepity\trainer.py" />
+    <Compile Include="deepity\util.py" />
+    <Compile Include="deepity\_ext\deepity_smat.py" />
+    <Compile Include="deepity\_ext\__init__.py" />
+    <Compile Include="deepity\_io_\load.py" />
+    <Compile Include="deepity\_io_\pydot.py" />
+    <Compile Include="deepity\_io_\write_svg.py" />
+    <Compile Include="deepity\_io_\__init__.py" />
+    <Compile Include="deepity\_lockfile\linklockfile.py" />
+    <Compile Include="deepity\_lockfile\mkdirlockfile.py" />
+    <Compile Include="deepity\_lockfile\pidlockfile.py" />
+    <Compile Include="deepity\_lockfile\sqlitelockfile.py" />
+    <Compile Include="deepity\_lockfile\__init__.py" />
+    <Compile Include="deepity\__init__.py" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>

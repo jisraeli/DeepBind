@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx;h;hxx;hpp</Extensions>
+    </Filter>
+    <Filter Include="CUDA Kernels">
+      <UniqueIdentifier>{45301eb6-c0c0-4517-ba98-587fe8cde372}</UniqueIdentifier>
+      <Extensions>.cu;.cuh</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\kangaroo_smat\autotune.cu">
+      <Filter>CUDA Kernels</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\kangaroo_smat\convseq.cu">
+      <Filter>CUDA Kernels</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\kangaroo_smat\convseq_bprop.cu">
+      <Filter>CUDA Kernels</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\kangaroo_smat\corr1ord.cu">
+      <Filter>CUDA Kernels</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\kangaroo_smat\poolrgn.cu">
+      <Filter>CUDA Kernels</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\kangaroo_smat\poolrgn_bprop.cu">
+      <Filter>CUDA Kernels</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\kangaroo_smat\corr1ord_bprop.cu">
+      <Filter>CUDA Kernels</Filter>
+    </CudaCompile>
+    <CudaCompile Include="..\kangaroo_smat\dropoutord.cu">
+      <Filter>CUDA Kernels</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\kangaroo_smat\kangaroo_smat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\kangaroo_smat\kangaroo_smat.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\kangaroo_smat\convseq.cuh">
+      <Filter>CUDA Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\kangaroo_smat\convseq_bprop.cuh">
+      <Filter>CUDA Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\kangaroo_smat\corr1ord.cuh">
+      <Filter>CUDA Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\kangaroo_smat\poolrgn.cuh">
+      <Filter>CUDA Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\kangaroo_smat\poolrgn_bprop.cuh">
+      <Filter>CUDA Kernels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\kangaroo_smat\corr1ord_bprop.cuh">
+      <Filter>CUDA Kernels</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

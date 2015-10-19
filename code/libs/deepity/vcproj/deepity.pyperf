@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ProfilingTarget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectTarget>
+    <TargetProject>581d3961-3143-4413-899b-f9723a3f8175</TargetProject>
+    <FriendlyName>deepity</FriendlyName>
+  </ProjectTarget>
+  <Reports>
+    <Report>
+      <Filename>C:\Users\Andrew\AppData\Local\Temp\deepity_20140116.vsp</Filename>
+    </Report>
+  </Reports>
+</ProfilingTarget>

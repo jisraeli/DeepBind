@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="debfb2b9-3989-4b6b-987d-32924a0f4b33" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="ba629151-f4d0-4bc5-bbce-e924b8475b08" name="smat">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="833eb8f2-75c3-4f0a-8a0e-7774816dc765" direction="Bidirectional">
+          <layerMoniker Id="a509be48-5745-42b1-b248-703a7e884a60" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="3da829df-eab4-4383-8167-61e8615364de" direction="Forward">
+          <layerMoniker Id="5e0be400-4d72-4e42-b42b-0fa2d8893a67" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="a509be48-5745-42b1-b248-703a7e884a60" name="smat_vm">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="eea614d6-d8da-43b0-835f-5638166087c7" direction="Forward">
+          <layerMoniker Id="5e0be400-4d72-4e42-b42b-0fa2d8893a67" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="b138117f-7e9b-4588-97c6-5f50f2d71f68" name="smat_cuda">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="7eda1c6b-9f89-4566-ba5e-e6e7743264c2" direction="Forward">
+          <layerMoniker Id="a509be48-5745-42b1-b248-703a7e884a60" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="d949ab43-6d4d-4fd2-8f67-431af4c08fbe" name="smat_cuda_autotune">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="f731d3c9-e5cf-42c5-905a-c160acf759bf" direction="Bidirectional">
+          <layerMoniker Id="b138117f-7e9b-4588-97c6-5f50f2d71f68" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="14e28b0d-845f-46d4-b563-e97a029fcd3e" name="smat_py">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="2636cfa0-a700-4747-bdb0-dc0179976c59" direction="Forward">
+          <layerMoniker Id="ba629151-f4d0-4bc5-bbce-e924b8475b08" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="5e0be400-4d72-4e42-b42b-0fa2d8893a67" name="base" />
+  </layers>
+</layerModel>
